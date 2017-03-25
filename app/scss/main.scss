@@ -1,0 +1,286 @@
+
+// heading for carousel 
+
+.carousel-heading {
+  color: #A7C4EF;
+  text-shadow: 3px 2px 2px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 50px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+
+/* container for the whole carousel set to flex */
+.carousel-drop {
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 500px;
+}
+
+.carousel-drop--left {
+  flex-direction: row-reverse;
+}
+
+/* hide those radios */
+.drop-radio {
+  display: none;
+}
+
+/* change the order of label container to show on right side */
+.label-container {
+  flex: 1 0 0;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px
+}
+
+.label-container--left {
+  padding: 0;
+  padding-right: 15px;
+}
+
+/* style the lables */
+.drop-label {
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  background:#A7C4EF ;
+  display: block;
+  border-radius: 50%;
+   transition: transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
+}
+
+
+
+
+
+
+
+.drop-label:nth-child(1) {
+  order: 5;
+}
+
+.drop-label:nth-child(2) {
+  order: 4;
+}
+.drop-label:nth-child(3) {
+  order: 3;
+}
+.drop-label:nth-child(4) {
+  order: 2;
+}
+.drop-label:nth-child(5) {
+  order: 1;
+}
+
+
+/* set the carousel slide container width */
+.carousel-drop__content {
+  display: flex;
+  flex-direction: column;
+  flex: 100 0 0;
+  position: relative;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+
+
+}
+
+
+
+
+.slide {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s ease; 
+}
+
+.slide img  {
+  display: flex;
+  flex: 1 0 0 ;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+/* animation  */
+
+
+@for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) {
+  background: #CFD2D7;
+  transform: translateY(370px);
+}
+  
+}
+
+
+@for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .carousel-drop__content .slide:nth-child(#{$i}) {
+    opacity: 1;
+
+  }
+}
+
+
+
+
+
+
+
+ // styles for second carousel 
+
+
+.carousel-drop--alternate {
+  flex-direction: column-reverse;
+
+}
+
+
+.label-container--alternate {
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+
+
+.drop-radio--alternate {
+  display: none;
+}
+
+.drop-label--alternate {
+   margin-left: 5px;
+   transition: transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
+
+}
+
+.carousel-drop__content--alternate {
+ flex-direction: row;
+}
+
+
+.content-container {
+  display: flex;
+  flex: 10 0 0;
+
+}
+
+
+.phantom-container {
+  flex: 1 0  0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.phantom-item {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 9px;
+  pointer-events: none;
+  visibility: hidden;
+
+}
+
+
+//  animation for second carousel 
+
+
+.js-drop-up {
+  animation: drop-up;
+  animation-duration: 2s;
+}
+
+
+@keyframes drop-down {
+   0% {transform: translateX(0px) translateY(0) };
+   25% {transform: translateX(0px) translateY(0)}
+   100%{transform: translateX(0px) translateY(470px)};
+}
+
+
+@keyframes drop-up {
+   0%{transform: translateX(50px) translateY(470px)};
+   25% {transform: translateX(50px) translateY(0px)};
+   100% {transform: translateX(-20px) translateY(0)};
+}
+
+
+
+
+@for $i from 1 through 5 {
+  .drop-radio--alternate:checked:nth-child(#{$i}) ~ .label-container--alternate .drop-label--alternate:nth-child(#{$i}) {
+  background: #CFD2D7;
+  transform: translateX(0px) translateY(500px);
+}
+  
+}
+
+
+@for $i from 1 through 5 {
+ .drop-radio--alternate:checked:nth-child(#{$i}) ~ .content-container .carousel-drop__content--alternate .slide--alternate:nth-child(#{$i}) {
+    opacity: 1;
+    
+  }
+}
+
+
+
+
+
+
+// media queries
+
+@media (max-width: 800px) {
+  .carousel-drop {
+    height: 300px;
+  }
+
+  @for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) {
+  transform: translateY(200px);
+ }
+  
+}
+
+
+
+@for $i from 1 through 5 {
+  .drop-radio--alternate:checked:nth-child(#{$i}) ~ .label-container--alternate .drop-label--alternate:nth-child(#{$i}) {
+  
+  transform: translateX(0px) translateY(300px);
+}
+  
+}
+
+
+
+.drop-label {
+  margin-top: 5px;
+}
+
+
+.carousel-drop__content {
+  flex: 20 0 0;
+}
+
+}
+
+
+
+
+
+

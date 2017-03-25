@@ -1,0 +1,22 @@
+{
+  "name": "carousel-dropping-circle",
+  "version": "1.0.0",
+  "description": "bov academ ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarRobertRodriguez/carousel-dropping-circle.git"
+  },
+  "author": "oscar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarRobertRodriguez/carousel-dropping-circle/issues"
+  },
+  "homepage": "https://github.com/OscarRobertRodriguez/carousel-dropping-circle#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
