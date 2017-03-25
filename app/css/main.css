@@ -57,6 +57,7 @@
 
 /* style the lables */
 .drop-label {
+  position: relative;
   cursor: pointer;
   margin-top: 10px;
   text-align: center;
@@ -65,10 +66,10 @@
   background: #A7C4EF;
   display: block;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
-  transition: -webkit-transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
-  transition: transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
-  transition: transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595), -webkit-transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595); }
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
 .drop-label:nth-child(1) {
   -webkit-box-ordinal-group: 6;
@@ -120,8 +121,8 @@
   bottom: 0;
   right: 0;
   opacity: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease; }
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease; }
 
 .slide img {
   display: -webkit-box;

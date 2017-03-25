@@ -48,6 +48,8 @@
 
 /* style the lables */
 .drop-label {
+  position: relative;
+
   cursor: pointer;
   margin-top: 10px;
   text-align: center;
@@ -56,7 +58,7 @@
   background:#A7C4EF ;
   display: block;
   border-radius: 50%;
-   transition: transform 800ms cubic-bezier(0.175, 0.885, 0.605, 0.595);
+  transition: transform 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);;
 }
 
 
@@ -105,7 +107,7 @@
   bottom: 0;
   right: 0;
   opacity: 0;
-  transition: opacity 1s ease; 
+  transition: opacity 500ms ease; 
 }
 
 .slide img  {
@@ -225,6 +227,7 @@
   .drop-radio--alternate:checked:nth-child(#{$i}) ~ .label-container--alternate .drop-label--alternate:nth-child(#{$i}) {
   background: #CFD2D7;
   transform: translateX(0px) translateY(500px);
+
 }
   
 }
