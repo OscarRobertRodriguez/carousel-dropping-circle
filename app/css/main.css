@@ -200,14 +200,6 @@
       -ms-flex: 12 0 0px;
           flex: 12 0 0; }
 
-.content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 10;
-      -ms-flex: 10 0 0px;
-          flex: 10 0 0; }
-
 .drop-radio--alter:checked:nth-child(1) ~ .label-container--alter .drop-label--alter:nth-child(1) {
   background: #CFD2D7;
   -webkit-transform: translateX(0px) translateY(500px);
