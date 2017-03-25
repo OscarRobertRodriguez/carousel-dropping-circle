@@ -14,12 +14,20 @@
 
 /* container for the whole carousel set to flex */
 .carousel-drop {
-  margin: 50px 0;
+  // margin added for demonstration only remove or modify for your layout
+  margin: 50px 0 0 0;
   position: relative;
   display: flex;
   justify-content: center;
   height: 500px;
 }
+
+
+// remove for demonstration only
+section:last-of-type {
+  margin-bottom: 200px;
+}
+
 
 
 
