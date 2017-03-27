@@ -57,10 +57,40 @@ section:last-of-type {
   background: #A7C4EF;
   display: block;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-timing-function: cubic-bezier(0.15, 0.725, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.15, 0.725, 0.32, 1.275);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(0.155, 0.64, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.155, 0.64, 0.32, 1.275);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(0.065, 0.46, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.065, 0.46, 0.32, 1.275);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(0, 0.76, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0, 0.76, 0.32, 1.275);
+  /* custom */
+  -webkit-transition-timing-function: cubic-bezier(0.6, 0.64, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.6, 0.64, 0.32, 1.275); }
+
+.drop-label:nth-child(1) {
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms; }
+
+.drop-label:nth-child(2) {
+  -webkit-transition-delay: 40ms;
+          transition-delay: 40ms; }
+
+.drop-label:nth-child(3) {
+  -webkit-transition-delay: 60ms;
+          transition-delay: 60ms; }
+
+.drop-label:nth-child(4) {
+  -webkit-transition-delay: 80ms;
+          transition-delay: 80ms; }
 
 /* set the carousel slide container width */
 .carousel-drop__content {
@@ -102,52 +132,156 @@ section:last-of-type {
 
 /* animation  */
 .drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
 .drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
 .drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
 .drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
 .drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+this group gives each eached checked radio button it own unique delay for the downward animation
+.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms; }
+
+.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
+  -webkit-transition-delay: 40ms;
+          transition-delay: 40ms; }
+
+.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
+  -webkit-transition-delay: 60ms;
+          transition-delay: 60ms; }
+
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
+  -webkit-transition-delay: 80ms;
+          transition-delay: 80ms; }
+
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) {
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
 .drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) ~ .drop-label {
-  background: #CFD2D7;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+  background: #CFD2D7; }
 
 .drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) ~ .drop-label {
-  background: #CFD2D7;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+  background: #CFD2D7; }
 
 .drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) ~ .drop-label {
-  background: #CFD2D7;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+  background: #CFD2D7; }
 
 .drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) ~ .drop-label {
-  background: #CFD2D7;
+  background: #CFD2D7; }
+
+.drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) ~ .drop-label {
+  background: #CFD2D7; }
+
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(2) {
+  -webkit-transition-delay: 60ms;
+          transition-delay: 60ms;
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
-.drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) ~ .drop-label {
-  background: #CFD2D7;
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(3) {
+  -webkit-transition-delay: 40ms;
+          transition-delay: 40ms;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(4) {
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(5) {
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(3) {
+  -webkit-transition-delay: 40ms;
+          transition-delay: 40ms;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(4) {
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(5) {
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(4) {
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(5) {
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px); }
+
+.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(5) {
   -webkit-transform: translateY(370px);
           transform: translateY(370px); }
 
@@ -189,10 +323,10 @@ section:last-of-type {
 
 .drop-label--alter {
   margin-left: 5px;
-  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
 .carousel-drop__content--alter {
   -webkit-box-orient: horizontal;
@@ -204,27 +338,37 @@ section:last-of-type {
           flex: 12 0 0; }
 
 .drop-radio--alter:checked:nth-child(1) ~ .label-container--alter .drop-label--alter:nth-child(1) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateX(0px) translateY(500px);
           transform: translateX(0px) translateY(500px); }
 
 .drop-radio--alter:checked:nth-child(2) ~ .label-container--alter .drop-label--alter:nth-child(2) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateX(0px) translateY(500px);
           transform: translateX(0px) translateY(500px); }
 
 .drop-radio--alter:checked:nth-child(3) ~ .label-container--alter .drop-label--alter:nth-child(3) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateX(0px) translateY(500px);
           transform: translateX(0px) translateY(500px); }
 
 .drop-radio--alter:checked:nth-child(4) ~ .label-container--alter .drop-label--alter:nth-child(4) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateX(0px) translateY(500px);
           transform: translateX(0px) translateY(500px); }
 
 .drop-radio--alter:checked:nth-child(5) ~ .label-container--alter .drop-label--alter:nth-child(5) {
-  background: #CFD2D7;
+  background: #fff;
+  border: 1px solid #CFD2D7;
+  cursor: default;
   -webkit-transform: translateX(0px) translateY(500px);
           transform: translateX(0px) translateY(500px); }
 
@@ -306,35 +450,35 @@ section:last-of-type {
     -webkit-transform: translateY(200px);
             transform: translateY(200px); }
   .drop-radio--alter:checked:nth-child(1) ~ .label-container--alter .drop-label--alter:nth-child(1) {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(2) ~ .label-container--alter .drop-label--alter:nth-child(2) {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(3) ~ .label-container--alter .drop-label--alter:nth-child(3) {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(4) ~ .label-container--alter .drop-label--alter:nth-child(4) {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(5) ~ .label-container--alter .drop-label--alter:nth-child(5) {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(1) ~ .label-container--alter .drop-label--alter:nth-child(1) ~ .drop-label {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(2) ~ .label-container--alter .drop-label--alter:nth-child(2) ~ .drop-label {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(3) ~ .label-container--alter .drop-label--alter:nth-child(3) ~ .drop-label {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(4) ~ .label-container--alter .drop-label--alter:nth-child(4) ~ .drop-label {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-radio--alter:checked:nth-child(5) ~ .label-container--alter .drop-label--alter:nth-child(5) ~ .drop-label {
-    -webkit-transform: translateX(0px) translateY(350px);
-            transform: translateX(0px) translateY(350px); }
+    -webkit-transform: translateX(0px) translateY(360px);
+            transform: translateX(0px) translateY(360px); }
   .drop-label {
     margin-top: 5px; }
   .carousel-drop__content {
