@@ -2,14 +2,15 @@
   color: #A7C4EF;
   text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 50px 0 0 0;
+  padding: 0 0;
+  padding-top: 50px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold; }
 
 /* container for the whole carousel set to flex */
 .carousel-drop {
-  margin: 50px 0 0 0;
+  margin: 50px 0  0 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,10 +18,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 500px; }
+  height: 500px;
+  margin: 0 auto 100px auto; }
 
-section:last-of-type {
-  margin-bottom: 200px; }
+.carousel-drop:first-of-type {
+  margin-bottom: 0; }
+
+h1:last-of-type {
+  clear: both;
+  display: block;
+  margin-bottom: 100px; }
 
 /* hide those radios */
 .drop-radio {
@@ -28,9 +35,9 @@ section:last-of-type {
 
 /* change the order of label container to show on right side */
 .label-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 0px;
+          flex: 2 0 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -41,9 +48,9 @@ section:last-of-type {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 15px; }
 
 /* style the lables */
@@ -57,24 +64,11 @@ section:last-of-type {
   background: #A7C4EF;
   display: block;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transition-timing-function: cubic-bezier(0.15, 0.725, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0.15, 0.725, 0.32, 1.275);
-  /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.155, 0.64, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0.155, 0.64, 0.32, 1.275);
-  /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.065, 0.46, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0.065, 0.46, 0.32, 1.275);
-  /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0, 0.76, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0, 0.76, 0.32, 1.275);
-  /* custom */
-  -webkit-transition-timing-function: cubic-bezier(0.6, 0.64, 0.32, 1.275);
-          transition-timing-function: cubic-bezier(0.6, 0.64, 0.32, 1.275); }
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */ }
 
 .drop-label:nth-child(1) {
   -webkit-transition-delay: 20ms;
@@ -101,9 +95,9 @@ section:last-of-type {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 100;
-      -ms-flex: 100 0 0px;
-          flex: 100 0 0;
+  -webkit-box-flex: 80;
+      -ms-flex: 80 0 0px;
+          flex: 80 0 0;
   position: relative;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3); }
 
@@ -131,42 +125,108 @@ section:last-of-type {
   width: 100%; }
 
 /* animation  */
+@-webkit-keyframes test {
+  0% {
+    background: #A7C4EF;
+    border: none; }
+  25% {
+    background: #A7C4EF;
+    border: none; }
+  75% {
+    background: #A7C4EF;
+    border: none; }
+  100% {
+    background: #fff;
+    border: 2px solid #CFD2D7; } }
+@keyframes test {
+  0% {
+    background: #A7C4EF;
+    border: none; }
+  25% {
+    background: #A7C4EF;
+    border: none; }
+  75% {
+    background: #A7C4EF;
+    border: none; }
+  100% {
+    background: #fff;
+    border: 2px solid #CFD2D7; } }
+
 .drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
+  border: 2px solid #CFD2D7;
   background: #fff;
-  border: 1px solid #CFD2D7;
   cursor: default;
   -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+          transform: translateY(370px);
+  -webkit-animation: test;
+          animation: test;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
+  border: 2px solid #CFD2D7;
   background: #fff;
-  border: 1px solid #CFD2D7;
   cursor: default;
   -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+          transform: translateY(370px);
+  -webkit-animation: test;
+          animation: test;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
+  border: 2px solid #CFD2D7;
   background: #fff;
-  border: 1px solid #CFD2D7;
   cursor: default;
   -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+          transform: translateY(370px);
+  -webkit-animation: test;
+          animation: test;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
+  border: 2px solid #CFD2D7;
   background: #fff;
-  border: 1px solid #CFD2D7;
   cursor: default;
   -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+          transform: translateY(370px);
+  -webkit-animation: test;
+          animation: test;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) {
+  border: 2px solid #CFD2D7;
   background: #fff;
-  border: 1px solid #CFD2D7;
   cursor: default;
   -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
+          transform: translateY(370px);
+  -webkit-animation: test;
+          animation: test;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 200ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
-this group gives each eached checked radio button it own unique delay for the downward animation
 .drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
   -webkit-transition-delay: 20ms;
           transition-delay: 20ms; }
@@ -183,55 +243,40 @@ this group gives each eached checked radio button it own unique delay for the do
   -webkit-transition-delay: 80ms;
           transition-delay: 80ms; }
 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
-  background: #fff;
-  border: 1px solid #CFD2D7;
-  cursor: default;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
-
-.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
-  background: #fff;
-  border: 1px solid #CFD2D7;
-  cursor: default;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
-
-.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
-  background: #fff;
-  border: 1px solid #CFD2D7;
-  cursor: default;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
-
-.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
-  background: #fff;
-  border: 1px solid #CFD2D7;
-  cursor: default;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
-
-.drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) {
-  background: #fff;
-  border: 1px solid #CFD2D7;
-  cursor: default;
-  -webkit-transform: translateY(370px);
-          transform: translateY(370px); }
-
 .drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) ~ .drop-label {
-  background: #CFD2D7; }
+  background: #CFD2D7;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) ~ .drop-label {
-  background: #CFD2D7; }
+  background: #CFD2D7;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) ~ .drop-label {
-  background: #CFD2D7; }
+  background: #CFD2D7;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) ~ .drop-label {
-  background: #CFD2D7; }
+  background: #CFD2D7;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(5) ~ .label-container .drop-label:nth-child(5) ~ .drop-label {
-  background: #CFD2D7; }
+  background: #CFD2D7;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275);
+  transition: transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275), -webkit-transform 300ms cubic-bezier(0.6, 0.64, 0.32, 1.275); }
 
 .drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(2) {
   -webkit-transition-delay: 60ms;
@@ -411,6 +456,10 @@ this group gives each eached checked radio button it own unique delay for the do
 
 .drop-radio--alter:checked:nth-child(5) ~ .carousel-drop__content--alter .slide--alter:nth-child(5) {
   opacity: 1; }
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 5px; } }
 
 @media (max-width: 800px) {
   .carousel-drop {
