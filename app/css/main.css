@@ -36,8 +36,8 @@ h1:last-of-type {
 /* change the order of label container to show on right side */
 .label-container {
   -webkit-box-flex: 2;
-      -ms-flex: 2 0 0px;
-          flex: 2 0 0;
+      -ms-flex: 2 0 10px;
+          flex: 2 0 10px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -51,7 +51,10 @@ h1:last-of-type {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 15px; }
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 5px; }
 
 /* style the lables */
 .drop-label {

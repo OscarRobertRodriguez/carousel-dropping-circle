@@ -64,13 +64,14 @@ h1:last-of-type {
 
 /* change the order of label container to show on right side */
 .label-container {
-  flex: 2 0 0;
+  flex: 2 0 10px;
   order: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 15px;
-}
+  justify-content: flex-start;
+  padding: 0 5px;
+  }
 
 
 
