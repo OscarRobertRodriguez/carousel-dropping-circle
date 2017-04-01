@@ -512,35 +512,35 @@ h1:last-of-type {
   .label-container {
     padding: 0; }
   .drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(1) {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(2) {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(3) ~ .label-container .label-wrap:nth-child(3) {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(4) ~ .label-container .label-wrap:nth-child(4) {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(5) ~ .label-container .label-wrap:nth-child(5) {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(1) ~ .label-wrap {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(2) ~ .label-wrap {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(3) ~ .label-container .label-wrap:nth-child(3) ~ .label-wrap {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(4) ~ .label-container .label-wrap:nth-child(4) ~ .label-wrap {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio:checked:nth-child(5) ~ .label-container .label-wrap:nth-child(5) ~ .label-wrap {
-    -webkit-transform: translateY(185px);
-            transform: translateY(185px); }
+    -webkit-transform: translateY(195px);
+            transform: translateY(195px); }
   .drop-radio--alter:checked:nth-child(1) ~ .label-container--alter .drop-label--alter:nth-child(1) {
     -webkit-transform: translateX(0px) translateY(360px);
             transform: translateX(0px) translateY(360px); }

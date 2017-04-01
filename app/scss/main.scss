@@ -457,7 +457,7 @@ transform: translateY($drop-height);
 
   @for $i from 1 through 5 {
   .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .label-wrap:nth-child(#{$i}) {
-  transform: translateY(185px);
+  transform: translateY(195px);
  }
   
 }
@@ -465,7 +465,7 @@ transform: translateY($drop-height);
 
 @for $i from 1 through 5 {
   .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i}) ~ .label-wrap  {
-    transform: translateY(185px);
+    transform: translateY(195px);
   }
 }
 
