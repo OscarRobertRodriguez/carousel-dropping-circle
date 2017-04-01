@@ -10,7 +10,7 @@
 $carousel-height: 500px; 
 
 
-$drop-height: $carousel-height - 130;
+$drop-height: $carousel-height - 110;
 
 
 $carousel-drop--alter: $carousel-height;
@@ -64,30 +64,39 @@ h1:last-of-type {
 
 /* change the order of label container to show on right side */
 .label-container {
-  flex: 2 0 10px;
+  position: relative;
+  flex: 1 0 20px;
+  padding-left: 5px;
   order: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 5px;
+  
+  }
+
+  .label-wrap {
+    display: flex;
+    background: transparent;
+    height: 15px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin-top: 1px;
+    transition: transform 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
   }
 
 
 
 /* style the lables */
 .drop-label {
-  position: relative;
   cursor: pointer;
-  margin-top: 10px;
-  text-align: center;
   width: 15px;
   height: 15px;
   background:#A7C4EF ;
-  display: block;
   border-radius: 50%;
-  transition: transform 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
-}
+  }
 
 
 
@@ -95,17 +104,17 @@ h1:last-of-type {
 
 
 
-.drop-label:nth-child(1) {
+.label-wrap:nth-child(1) {
   transition-delay: 20ms;
 }
 
-.drop-label:nth-child(2) {
+.label-wrap:nth-child(2) {
   transition-delay: 40ms;
 }
-.drop-label:nth-child(3) {
+.label-wrap:nth-child(3) {
   transition-delay: 60ms;
 }
-.drop-label:nth-child(4) {
+.label-wrap:nth-child(4) {
   transition-delay: 80ms;
 }
 // .drop-label:nth-child(5) {
@@ -176,14 +185,25 @@ h1:last-of-type {
 
 
 @for $i from 1 through 5 {
-  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i})  {
+  
+  cursor: default;
+  transform: translateY($drop-height);
+  transition: transform 200ms cubic-bezier(0.600, 0.640, 0.320, 1.275);
+ 
+}
+  
+}
+
+
+@for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i})  > .drop-label {
   border: 2px solid #CFD2D7;
   background: #fff;
   cursor: default;
-  transform: translateY($drop-height);
   animation: test;
   animation-duration: 700ms;
-  transition: transform 200ms cubic-bezier(0.600, 0.640, 0.320, 1.275);
+  // transition: transform 200ms cubic-bezier(0.600, 0.640, 0.320, 1.275);
  
 }
   
@@ -192,19 +212,19 @@ h1:last-of-type {
 
 // this group gives each eached checked radio button it own unique delay for the downward animation
 // 
-.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(4) {
+.drop-radio:checked:nth-child(4) ~ .label-container .label-wrap:nth-child(4) {
   transition-delay: 20ms;
 }
 
-.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(3) {
+.drop-radio:checked:nth-child(3) ~ .label-container .label-wrap:nth-child(3) {
   transition-delay: 40ms;
 }
 
-.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(2) {
+.drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(2) {
   transition-delay: 60ms;
 }
 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(1) {
+.drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(1) {
   transition-delay: 80ms;
 }
 
@@ -223,12 +243,8 @@ h1:last-of-type {
 // }
 
 
-
-
-
 @for $i from 1 through 5 {
-  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) ~ .drop-label {
-    background: #CFD2D7;
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i}) ~ .label-wrap  {
     transition: transform 300ms cubic-bezier(0.600, 0.640, 0.320, 1.275);
   }
 }
@@ -236,23 +252,33 @@ h1:last-of-type {
 
 
 
+@for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i}) ~ .label-wrap .drop-label {
+    background: #CFD2D7;
+   
+  }
+}
+
+
+
+
 //  label one delays 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(2)  {
+.drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(2)  {
   transition-delay: 60ms;
-  transform: translateY($drop-height);
+  transform: translateY($drop-height );
 }
 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(3)  {
+.drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(3)  {
   transition-delay: 40ms;
-  transform: translateY($drop-height);
+  transform: translateY($drop-height );
 }
 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(4)  {
+.drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(4)  {
   transition-delay: 20ms;
-  transform: translateY($drop-height);
+  transform: translateY($drop-height );
 }
 
-.drop-radio:checked:nth-child(1) ~ .label-container .drop-label:nth-child(5)  {
+.drop-radio:checked:nth-child(1) ~ .label-container .label-wrap:nth-child(5)  {
   transform: translateY($drop-height);
 }
 
@@ -260,20 +286,20 @@ h1:last-of-type {
 
 
 // label 2 delays
-.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(3)  {
+.drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(3)  {
 
 transition-delay: 40ms;
 transform: translateY($drop-height);
 }
 
-.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(4)  {
+.drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(4)  {
 
  transition-delay: 20ms;
  transform: translateY($drop-height);
 }
 
 
-.drop-radio:checked:nth-child(2) ~ .label-container .drop-label:nth-child(5)  {
+.drop-radio:checked:nth-child(2) ~ .label-container .label-wrap:nth-child(5)  {
   transform: translateY($drop-height);
 }
 
@@ -282,12 +308,12 @@ transform: translateY($drop-height);
 
 // label 3 delays 
 
-.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(4)  {
+.drop-radio:checked:nth-child(3) ~ .label-container .label-wrap:nth-child(4)  {
   transition-delay: 20ms;
   transform: translateY($drop-height);
 }
 
-.drop-radio:checked:nth-child(3) ~ .label-container .drop-label:nth-child(5)  {
+.drop-radio:checked:nth-child(3) ~ .label-container .label-wrap:nth-child(5)  {
   transform: translateY($drop-height);
 }
 
@@ -295,7 +321,7 @@ transform: translateY($drop-height);
 
 // label 4 delays 
 
-.drop-radio:checked:nth-child(4) ~ .label-container .drop-label:nth-child(5)  {
+.drop-radio:checked:nth-child(4) ~ .label-container .label-wrap:nth-child(5)  {
   transform: translateY($drop-height);
 }
 
@@ -406,7 +432,13 @@ transform: translateY($drop-height);
   .container {
     padding: 0 5px;
   }
+
+  .label-container {
+    padding: 0;
+  }
 }
+
+
 
 @media (max-width: 800px) {
   .carousel-drop {
@@ -419,29 +451,29 @@ transform: translateY($drop-height);
   }
 
   .label-container {
-    padding-bottom: 10px;
+    padding: 0
   }
 
 
   @for $i from 1 through 5 {
-  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) {
-  transform: translateY(200px);
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .label-wrap:nth-child(#{$i}) {
+  transform: translateY(185px);
  }
   
 }
 
-  @for $i from 1 through 5 {
-  .drop-radio:checked:nth-child(#{$i}) ~ .label-container  .drop-label:nth-child(#{$i}) ~ .drop-label {
-  transform: translateY(200px);
- }
-  
+
+@for $i from 1 through 5 {
+  .drop-radio:checked:nth-child(#{$i}) ~ .label-container .label-wrap:nth-child(#{$i}) ~ .label-wrap  {
+    transform: translateY(185px);
+  }
 }
+
 
 
 
 @for $i from 1 through 5 {
   .drop-radio--alter:checked:nth-child(#{$i}) ~ .label-container--alter .drop-label--alter:nth-child(#{$i}) {
-  
   transform: translateX(0px) translateY(360px);
 }
   
@@ -458,9 +490,6 @@ transform: translateY($drop-height);
 
 
 
-.drop-label {
-  margin-top: 5px;
-}
 
 
 .carousel-drop__content {
